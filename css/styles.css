@@ -5,8 +5,196 @@
     --second-colour: #555;
 }
 
+@font-face {
+    font-family: 'NordicBold';
+    src: url('../assets/Norse-Bold.otf');
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.img-logo-container {
+    width: 40vw;
+    background-image: url(../assets/norse-mountain.jpg);
+    background-position: center;
+    background-size: 100%;
+    position: relative;
+}
+
+.opac-banner-container {
+    margin-top: 45%;
+    width: 100%;
+    height: 120px;
+    background-color: #000;
+    opacity: 20%;
+    position: absolute;
+    z-index: 99;
+}
+
+.logo-container {
+    margin-top: 45%;
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 100px
+}
+
+.brand-tag {
+    padding-top: 8px;
+    color: var(--main-colour);
+    font-family: NordicBold;
+    font-size: 80px;
+    font-weight: 400;
+}
+
+.attr {
+    left: calc(40vw / 3);
+    padding-bottom: 20px;
+    position: fixed;
+    bottom: 0;
+}
+
+.attr a, .attr-text{
+    color: var(--main-colour);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 100vh;
+}
+
+.form-sub {
+    height: calc(100vh / 3);
+    padding-left: 10%;
+    padding-right: 25%; 
+}
+
+.info-section {
+    padding-top: 12%;
+    padding-bottom: 18%;
+}
+
+.info-text {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+/* Form */
+.form-section {
+    background-color: lightgrey;
+    padding-top: 45px;
+}
+
+.form-header {
+    padding-bottom: 30px;
+}
+
+.form-comp {
+    display: flex;
+    padding: 5px 0 5px 0;
+    flex-direction: column;
+}
+
+.signup-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 20px;
+}
+
+input {
+    height: 30px;
+    width: 180px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+/* Signup */
+.create-acc-container {
+    padding-top: 7%;
+}
+
+.create-btn {
+    background-color: tomato;
+    height: 45px;
+    width: 190px;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.login-section {
+    padding-top: 30px;
+}
+
+.login {
+    color: tomato;
+}
+
+@media only screen and (max-width: 660px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-logo-container {
+        width: 100vw;
+        height: 30vh;
+        padding-bottom: 20px;
+    }
+
+    .opac-banner-container {
+        margin-top: 30px;
+    }
+
+    .logo-container {
+        margin-top: 30px;
+    }
+
+    .attr {
+        position: sticky;
+        display: none;
+    }
+
+    .form-container {
+        width: 100vw;
+        padding: 0;
+    }
+
+    .form-sub {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .info-section {
+        height: 100vw;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .form-section {
+        height: 100vh;
+        padding-bottom: 60px;
+    }
 }
